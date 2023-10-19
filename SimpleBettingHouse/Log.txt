@@ -1,0 +1,4 @@
+Sesión iniciada por usuario: [pepe1] Fecha: [Wed Oct 18 22:28:50 ECT 2023]
+Sesión cerrada por usuario: [pepe1] Fecha: [Wed Oct 18 22:29:02 ECT 2023]
+Sesión iniciada por usuario: [pepem] Fecha: [Wed Oct 18 22:52:46 ECT 2023]
+Sesión cerrada por usuario: [pepem] Fecha: [Wed Oct 18 22:52:56 ECT 2023]
