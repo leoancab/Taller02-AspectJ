@@ -31,7 +31,15 @@ public aspect Logger {
 		e.printStackTrace();
 		}
 	}
-
+	pointcut loginAndLogoutUser() : (call(* com.bettinghouse.BettingHouse.effectiveLogIn(..)) || call(* com.bettinghouse.BettingHouse.effectiveLogOut(..)));
+	after() returning : loginAndLogoutUser() {
+		User user = (User)thisJoinPoint.getArgs()[0];
+		if (thisJoinPoint.getSignature().getName().equals("effectiveLogIn")) {
+			recordAction("Log.txt", user, "Sesión iniciada");
+		} else if (thisJoinPoint.getSignature().getName().equals("effectiveLogOut")) {
+			recordAction("Log.txt", user, "Sesión cerrada");
+		}
+	}
 
 }
 
